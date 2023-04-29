@@ -1,0 +1,42 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    // NOTA: no declare la variable 'color' y sin embargo funciona..
+
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;    
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x + "," + y);        
+    }
+
+    var i = 0;
+    let colores = ["red","green","blue"];
+    function alterarColor(evento) {
+        if(evento){
+            if(i==0){
+                color = colores[i];
+                i++;
+            }else if(i==1){
+                color = colores[i];
+                i++;
+            }else if(i==2){
+                color = colores[i];
+                i=0;
+            }
+        }
+        return false;   // return false; es importante para que el menú contextual padrón de canvas no sea exhibido.
+    }
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0,0,600,400); 
+
+    pantalla.onclick = dibujarCirculo;  // .onclick CLICK IZQUIERDO
+    pantalla.oncontextmenu = alterarColor;  // .oncontextmenu CLICK DERECHO
+
+</script> 
