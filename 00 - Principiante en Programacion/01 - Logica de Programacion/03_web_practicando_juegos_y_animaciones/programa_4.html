@@ -1,0 +1,42 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    function dibujarCircunferencia(x,y,radio){
+        pincel.fillStyle = "lightgray";
+        pincel.fillRect(0, 0, 600, 400);
+        pincel.fillStyle = "blue";
+        pincel.beginPath(); // Comenzar a graficar, luego coordenadas
+        pincel.arc(x, y, radio, 0, 2 * Math.PI); // Dibujar circunferencia (x,y,radio,angulo inicial,angulo final en radiales)
+        pincel.fill();
+    }
+
+    function limpiarPantalla(){
+        pincel.clearRect(0,0,600,400);
+    }
+
+    var x=0;
+    var right=true;
+    function actualizarPantalla(){
+        limpiarPantalla();
+        if(right==true && x<590){
+            dibujarCircunferencia(x,20,10);
+            x++;
+        }else if(right==true && x==590){
+            dibujarCircunferencia(x,20,10);
+            right=false;
+        }else if(right==false && x>10){
+            dibujarCircunferencia(x,20,10);
+            x--;
+        }else if(right==false && x==10){
+            dibujarCircunferencia(x,20,10);
+            right=true;
+        }
+    }
+
+    setInterval(actualizarPantalla,5); // 1000 milisegundos = 1 segundo
+
+
+</script>

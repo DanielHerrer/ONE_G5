@@ -1,0 +1,92 @@
+<!-- Franco Daniel Herrera - AluraLatam ONE G5 -->
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+    var color = 'blue'; // color default
+    var puedoDibujar = false;
+
+    function lienzo(){
+        pincel.fillStyle = 'grey';
+        pincel.fillRect(0, 0, 600, 400);
+    }
+
+    function paletaColores(){
+        pincel.strokeStyle = 'white';
+        pincel.fillStyle = 'red';
+        pincel.fillRect(0, 0, 50, 50);
+        pincel.strokeRect(0,0,50,50);
+        pincel.fillStyle = 'green';
+        pincel.fillRect(50, 0, 50, 50);
+        pincel.strokeRect(50,0,50,50);
+        pincel.fillStyle = 'blue';
+        pincel.fillRect(100, 0, 50, 50);
+        pincel.strokeRect(100,0,50,50);
+    }
+
+    lienzo();           // Imprime el lienzo
+    paletaColores();    // Imprime la paleta de colores
+
+    function dentroLienzo(x,y){    // confirma que la posicion sea el lienzo
+        if(!(x<=150 && y<=50)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function colorRojo(x,y){    // confirma que la posicion sea el rojo
+        if(x<=50 && y<=50){
+            return true;
+        }
+    }
+
+    function colorVerde(x,y){   // confirma que la posicion sea el verde
+        if(x>50 && x<=100 && y<=50){
+            return true;
+        }
+    }
+
+    function colorAzul(x,y){    // confirma que la posicion sea el azul
+        if(x>100 && x<=150 && y<=50){
+            return true;
+        }
+    }
+
+    function dibujarCirculo(evento) {   // si puedoDibujar==true y la posicion actual es dentro del lienzo entonces..
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if(puedoDibujar && dentroLienzo(x,y)){  
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+    }
+
+    function habilitarDibujar(evento) { // habilita el primer click segun su posicion
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if(dentroLienzo(x,y)){
+            puedoDibujar = true;
+        }else if(colorVerde(x,y)){
+            color = 'green';
+        }else if(colorAzul(x,y)){
+            color = 'blue';
+        }else if(colorRojo(x,y)){
+            color = 'red';
+        }
+    }
+
+    function deshabilitarDibujar() {
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousemove = dibujarCirculo;  // onmousemove - Evento de movimiento
+
+    pantalla.onmousedown = habilitarDibujar;    // onmousedown - Evento click se mantiene apretado
+
+    pantalla.onmouseup = deshabilitarDibujar;   // onmouseup - Evento click se suelta
+
+</script>
