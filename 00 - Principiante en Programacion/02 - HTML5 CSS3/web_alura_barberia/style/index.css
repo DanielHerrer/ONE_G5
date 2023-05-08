@@ -15,50 +15,110 @@ lo que significa que otros elementos en la página se comportarán como si el el
 Si no hay ningún elemento padre con una posición no estática, se colocará en relación a la ventana del navegador.
 */
 
+html {   
+    min-width: 320px;   
+    max-width: 1400px; 
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja {
+    width: 940px; /* Porque comunmente las pantallas tienen 1280px de formato, 70% de la pantalla */
+    position: relative;
+    margin: 0 auto; /* 'auto' sirve para poder darle un margen automatico a la der. por ende tambien a la izq.*/
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px; /* arriba derecha abajo izquierda */
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav a:hover {
+    color: #ffa600;
+    text-decoration: underline; /* subrayado */
+}
+
+/*****************************/
+
 #banner{
     width: 100%;
 }
 
 .principal{
-    padding: 20px;
+    padding: 20px 50px;
     background: #CCCCCC;
+    font-size: 20px;
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 20px;
 }
 
-.titulo-principal{
+.principal h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
     padding-left: 30px;
+    text-decoration: underline;
 }
 
-.titulo-centralizado{
+.texto-centralizado{
     text-align: center;
 }
 
-p{
-    text-align: center;
-}
-
-em strong{
+em strong {
     color: red; 
 }
 
 #mision {
     font-size: 20px;
-}
-
-.diferenciales{
-    padding: 30px;
-    background: #FFFFFF;
-}
-
-h2{
     text-align: center;
+    margin: 20px auto;
 }
 
-ul{
-    margin-right: 15%;
+.diferenciales {
+    padding: 20px 50px;
+    background: #CCCCCC;
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+.texto-dif {
+    margin-top: 7%;
+    width: 40%;
     vertical-align: top;
-    width: 20%;
     display: inline-block;  /* DISPLAY INLINE-BLOCK: Le pedimos que solo el espacio de su contenido y los espaciamientos arr,aba,der,izq puedan ser ajustables */
                             /* DISPLAY BLOCK: Hace un salto de linea por cada elemento */
+}
+
+.texto-dif h3 {
+    font-size: 22px;
+    font-style: bold;
+    margin-left: 25%;
+    margin-bottom: 15px;
+}
+
+.texto-dif ul {
+    margin: 0 auto;
+    margin-right: 15%;
+    margin-left: 10%;
+    font-size: 18px;
 }
 
 .items{
@@ -66,5 +126,20 @@ ul{
 }
 
 .imgDiferenciales{
-    width: 50%;
+    width: 40%;
+    border-radius: 10px;
+}
+
+/************************************/
+
+footer {
+    background: url(../img/bg.jpg);
+    text-align: center;
+    padding: 40px;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
 }
