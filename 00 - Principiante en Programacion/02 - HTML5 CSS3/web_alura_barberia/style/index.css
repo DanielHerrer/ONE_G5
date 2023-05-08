@@ -1,0 +1,70 @@
+/*
+position: static: Es la posición por defecto de todos los elementos en una página web. 
+Los elementos con esta posición se colocan en el flujo normal del documento y no se ven afectados 
+por las propiedades top, bottom, left y right.
+
+position: relative: Los elementos con esta posición se colocan en relación a su posición normal 
+en el flujo del documento. Puedes mover estos elementos utilizando las propiedades top, bottom, left y right, 
+pero no los sacarás de su posición normal en el flujo del documento. Otros elementos en la página se seguirán 
+comportando como si el elemento relativo siguiera en su posición normal.
+
+position: absolute: Los elementos con esta posición se colocan en una posición absoluta con respecto 
+a su elemento padre más cercano que tenga una posición no estática. Puedes mover estos elementos 
+utilizando las propiedades top, bottom, left y right, y se sacarán del flujo normal del documento, 
+lo que significa que otros elementos en la página se comportarán como si el elemento absoluto no estuviera allí. 
+Si no hay ningún elemento padre con una posición no estática, se colocará en relación a la ventana del navegador.
+*/
+
+#banner{
+    width: 100%;
+}
+
+.principal{
+    padding: 20px;
+    background: #CCCCCC;
+}
+
+.titulo-principal{
+    padding-left: 30px;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+em strong{
+    color: red; 
+}
+
+#mision {
+    font-size: 20px;
+}
+
+.diferenciales{
+    padding: 30px;
+    background: #FFFFFF;
+}
+
+h2{
+    text-align: center;
+}
+
+ul{
+    margin-right: 15%;
+    vertical-align: top;
+    width: 20%;
+    display: inline-block;  /* DISPLAY INLINE-BLOCK: Le pedimos que solo el espacio de su contenido y los espaciamientos arr,aba,der,izq puedan ser ajustables */
+                            /* DISPLAY BLOCK: Hace un salto de linea por cada elemento */
+}
+
+.items{
+    font-style: italic;
+}
+
+.imgDiferenciales{
+    width: 50%;
+}

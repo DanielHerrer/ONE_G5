@@ -1,0 +1,82 @@
+/*
+position: static: Es la posición por defecto de todos los elementos en una página web. 
+Los elementos con esta posición se colocan en el flujo normal del documento y no se ven afectados 
+por las propiedades top, bottom, left y right.
+
+position: relative: Los elementos con esta posición se colocan en relación a su posición normal 
+en el flujo del documento. Puedes mover estos elementos utilizando las propiedades top, bottom, left y right, 
+pero no los sacarás de su posición normal en el flujo del documento. Otros elementos en la página se seguirán 
+comportando como si el elemento relativo siguiera en su posición normal.
+
+position: absolute: Los elementos con esta posición se colocan en una posición absoluta con respecto 
+a su elemento padre más cercano que tenga una posición no estática. Puedes mover estos elementos 
+utilizando las propiedades top, bottom, left y right, y se sacarán del flujo normal del documento, 
+lo que significa que otros elementos en la página se comportarán como si el elemento absoluto no estuviera allí. 
+Si no hay ningún elemento padre con una posición no estática, se colocará en relación a la ventana del navegador.
+*/
+
+html {   
+    min-width: 320px;   
+    max-width: 1400px; 
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja {
+    width: 940px; /* Porque comunmente las pantallas tienen 1280px de formato, 70% de la pantalla */
+    position: relative;
+    margin: 0 auto; /* 'auto' sirve para poder darle un margen automatico a la der. por ende tambien a la izq.*/
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px; /* arriba derecha abajo izquierda */
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.productos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li {
+    text-align: center;
+    display: inline-block;
+    width: 30%; /* 30 % por cada elemento (90 en total) */
+    vertical-align: top; /* La alineacion de los items sea en la vertical superior */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /* Tamaño de la caja: El borde de cada uno de los items será el lítime del espacio que va a ser definido. */
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-style: bold;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 30px;
+    font-style: bold;
+    margin-top: 10px;
+}
