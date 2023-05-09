@@ -25,20 +25,41 @@
             <div>
                 <form action="">
                     <label for="nombreapellido">Nombre y Apellido:</label>
-                    <input type="text" id="nombreapellido">
+                    <input type="text" class="input-padron" id="nombreapellido">
                     <label for="email">Correo Electronico:</label>
-                    <input type="text" id="email">
+                    <input type="text" class="input-padron" id="email">
                     <label for="telefono">Numero de telefono:</label>
-                    <input type="text" id="telefono">
+                    <input type="text" class="input-padron" id="telefono">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="" class="input-padron" id="mensaje" cols="70" rows="10"></textarea>
+                    
+                    <div>
+                        <p>Cómo le gustaría que lo contactemos?</p>
+
+                        <!-- name ayuda a que se entienda que los 3 radios son del mismo grupo, solo 1 se seleccionará -->
+                        <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Vía Email</label>  
+                        <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Vía Telefono</label>
+                        <label for="radio-wpp"><input type="radio" name="contacto" value="wpp" id="radio-wpp">Vía Whatsapp</label>
+                        
+                    </div>
+
+                    <div>
+                        <p>En cual horario prefiere ser atendido?</p>
+                        <select name="" id="">
+                            <option value="">Mañana</option>
+                            <option value="">Tarde</option>
+                            <option value="">Noche</option>
+                        </select>
+                    </div>
+                    
+
+                    <label class="checkbox"><input type="checkbox">Le gustaría recibir novedades de la Barbería Alura?</label>
 
                     <input type="submit" value="Enviar formulario">
-
                 </form>
             </div>
 
-
         </main>
-
     </body>
 
     <footer>
