@@ -10,7 +10,7 @@
     <body>
         <header>
             <div class="caja">
-                <h1><img src="./img/logo.png" alt=""></h1>
+                <h1><img src="./img/logo.png" alt="Logo de la Barbería Alura"></h1>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -22,48 +22,71 @@
         </header>
 
         <main>
-            <div>
-                <form action="">
-                    <label for="nombreapellido">Nombre y Apellido:</label>
-                    <input type="text" class="input-padron" id="nombreapellido">
-                    <label for="email">Correo Electronico:</label>
-                    <input type="text" class="input-padron" id="email">
-                    <label for="telefono">Numero de telefono:</label>
-                    <input type="text" class="input-padron" id="telefono">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea name="" class="input-padron" id="mensaje" cols="70" rows="10"></textarea>
-                    
-                    <div>
-                        <p>Cómo le gustaría que lo contactemos?</p>
+            <form action="">
+                <label for="nombreapellido">Nombre y Apellido:</label>
+                <input type="text" class="input-padron" id="nombreapellido" required>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" class="input-padron" id="email" required placeholder="email@dominio.com">
+                <label for="telefono">Numero de telefono:</label>
+                <input type="tel" class="input-padron" id="telefono" required placeholder="(XX) XXXX-XXXX">
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="" class="input-padron" id="mensaje" cols="70" rows="10" required></textarea>
+                
+                <!-- fieldset = Todos los items de este grupo hacen referencia a la misma cosa -->
+                <fieldset>  
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend> <!-- legend = Marcar un título de un grupo de campos en el formulario -->
 
-                        <!-- name ayuda a que se entienda que los 3 radios son del mismo grupo, solo 1 se seleccionará -->
-                        <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Vía Email</label>  
-                        <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Vía Telefono</label>
-                        <label for="radio-wpp"><input type="radio" name="contacto" value="wpp" id="radio-wpp">Vía Whatsapp</label>
-                        
-                    </div>
+                    <!-- name ayuda a que se entienda que los 3 radios son del mismo grupo, solo 1 se seleccionará -->
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Vía Email</label>  
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Vía Telefono</label>
+                    <label for="radio-wpp"><input type="radio" name="contacto" value="wpp" id="radio-wpp" checked>Vía Whatsapp</label>
+                </fieldset>
 
-                    <div>
-                        <p>En cual horario prefiere ser atendido?</p>
-                        <select name="" id="">
-                            <option value="">Mañana</option>
-                            <option value="">Tarde</option>
-                            <option value="">Noche</option>
-                        </select>
-                    </div>
-                    
+                <fieldset>
+                    <legend>¿En cual horario prefiere ser atendido?</legend> 
+                    <select name="" id="">
+                        <option value="">Mañana</option>
+                        <option value="">Tarde</option>
+                        <option value="">Noche</option>
+                    </select>
+                </fieldset>
+                
 
-                    <label class="checkbox"><input type="checkbox">Le gustaría recibir novedades de la Barbería Alura?</label>
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
 
-                    <input type="submit" value="Enviar formulario">
-                </form>
-            </div>
+                <input class="enviar" type="submit" value="Enviar formulario">
+            </form>
+
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                </tbody>
+                <!-- <tfoot> -->
+            </table>
 
         </main>
     </body>
 
     <footer>
-        <img src="./img/logo-blanco.png" alt="">
+        <img src="./img/logo-blanco.png" alt="Logo de la Barbería Alura">
         <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
     </footer>
 </html>

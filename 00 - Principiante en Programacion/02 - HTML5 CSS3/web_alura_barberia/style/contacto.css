@@ -49,7 +49,7 @@ form {
     margin: 40px 0;
 }
 
-form label, form p {
+form label, form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
@@ -64,6 +64,39 @@ form label, form p {
 
 .checkbox {
     margin: 30px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #ffa600;
+    border: none;
+    border-radius: 10px;
+    transition: 1s all; /* all = 1 seg de transición para TODOS los elementos */
+}
+
+.enviar:hover {
+    background-color: #b6801b;
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+table {
+    margin: 40px 90px;
+}
+
+thead {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #555555;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
 }
 
 /*******************************************************************/  
