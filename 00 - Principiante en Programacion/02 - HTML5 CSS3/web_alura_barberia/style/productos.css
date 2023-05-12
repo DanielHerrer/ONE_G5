@@ -20,6 +20,10 @@ html {
     max-width: 1400px; 
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background-color: #BBBBBB;
     padding: 20px 0;
@@ -48,11 +52,11 @@ nav a {
     color: #000000;
     font-weight: bold;
     font-size: 22px;
+    transition: 300ms;
 }
 
 nav a:hover {
     color: #ffa600;
-    text-decoration: underline; /* subrayado */
 }
 
 .productos {
@@ -86,7 +90,7 @@ nav a:hover {
     border-color: #088c19;
 }
 
-.productos h2 {
+.productos li h2 {
     font-size: 30px;
     font-style: bold;
 }
@@ -116,4 +120,33 @@ footer {
     color: #FFFFFF;
     font-size: 13px;
     margin: 20px;
+}
+
+@media screen and (max-width:480px){ /* un estilo diferente para dispositivos de hasta 480 píxeles de ancho usando media query */
+    
+    h1{
+        text-align: center;
+    }
+    
+    nav {
+        position: static;
+    }
+
+    nav a {
+        font-size: 1.2em;
+    }
+
+    .caja {
+        width: auto;
+    }
+
+    .productos {
+        width: auto;
+    }
+
+    .productos li{
+        width: auto;
+        margin: 1em 0;
+    }
+
 }

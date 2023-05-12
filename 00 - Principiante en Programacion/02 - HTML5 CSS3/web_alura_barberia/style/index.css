@@ -52,16 +52,16 @@ nav a {
     color: #000000;
     font-weight: bold;
     font-size: 22px;
+    transition: 300ms;
 }
 
 nav a:hover {
     color: #ffa600;
-    text-decoration: underline; /* subrayado */
 }
 
 /*****************************/
 
-.banner{
+.banner {
     width: 100%;
 }
 
@@ -82,11 +82,11 @@ nav a:hover {
     clear: left; /* Limpia la izquierda para que la imagen no tome espacio vertical sobre el titulo */
 }
 
-.principal img {
+.principal > img {
     width: calc(10% + 15px);
     float: left;    /* float: left le permite ser un elemento flotante que se combina con el resto de elementos */
     margin: 0 2em 2em 0; /* arriba derecha abajo izquierda (SENTIDO AGUJAS HORARIO RELOJ) */
-    box-shadow: #000000 10px;
+    box-shadow: 0 0 15px #000000;
     border-radius: 99%;
 }
 
@@ -129,13 +129,12 @@ nav a:hover {
     font-size: 1.7em;
     font-style: bold;
     color: #FFFFFF;
-    margin-bottom: 1em;
     text-align: center;
 }
 
 .diferenciales-contenido {
     width: 740px;
-    margin: 0 auto;
+    margin: 2em auto;
 }
 
 .diferenciales-contenido > ul { 
@@ -164,7 +163,13 @@ nav a:hover {
 .diferenciales-contenido > ul + img {   /* Pertenecientes a '.diferenciales-contenido', dame los elementos 'img' que continuen luego de un elemento 'ul' */
     width: calc(60% - 5px);
     border-radius: 5px;
+    box-shadow: 10px 10px 30px 15px #000000; /* horizontal - vertical - difuminado - expansion - color */
+    transition: 200ms;
 }
+
+.diferenciales-contenido > ul + img:hover {
+    opacity: 0.3;
+} 
 
 .video {
     width: 727px;
@@ -183,4 +188,28 @@ footer {
     color: #FFFFFF;
     font-size: 13px;
     margin: 20px;
+}
+
+@media screen and (max-width:480px){ /* un estilo diferente para dispositivos de hasta 480 píxeles de ancho usando media query */
+    
+    h1{
+        text-align: center;
+    }
+    
+    nav {
+        position: static;
+    }
+
+    nav a {
+        font-size: 1.2em;
+    }
+
+    .caja, .principal, .mapa-contenido, .diferenciales-contenido, .video {
+        width: auto;
+    }
+
+    .diferenciales-contenido > ul, .diferenciales-contenido > ul + img  {
+        width: 100%;
+    }
+
 }
