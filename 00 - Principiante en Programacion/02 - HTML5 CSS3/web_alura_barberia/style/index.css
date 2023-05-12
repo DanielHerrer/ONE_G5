@@ -20,6 +20,10 @@ html {
     max-width: 1400px; 
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background-color: #BBBBBB;
     padding: 20px 0;
@@ -57,77 +61,114 @@ nav a:hover {
 
 /*****************************/
 
-#banner{
+.banner{
     width: 100%;
 }
 
 .principal{
-    padding: 20px 50px;
+    padding: 50px 60px;
     background: #CCCCCC;
-    font-size: 20px;
-    width: 90%;
-    margin: 15px auto;
+    font-size: 1.1em;
+    width: 85%;
+    margin: 3em auto;
     border-radius: 20px;
 }
 
-.principal h1 {
-    font-size: 25px;
-    margin-bottom: 20px;
+.titulo-principal {
+    font-size: 2em; /* 2em = 2 veces el tamaño padron que tiene el navegador (15px default, depende el navegador) */
+    margin: 0 0 1em; /* arriba derecha abajo */
     padding-left: 30px;
-    text-decoration: underline;
+    text-align: center;
+    clear: left; /* Limpia la izquierda para que la imagen no tome espacio vertical sobre el titulo */
 }
 
-.texto-centralizado{
+.principal img {
+    width: calc(10% + 15px);
+    float: left;    /* float: left le permite ser un elemento flotante que se combina con el resto de elementos */
+    margin: 0 2em 2em 0; /* arriba derecha abajo izquierda (SENTIDO AGUJAS HORARIO RELOJ) */
+    box-shadow: #000000 10px;
+    border-radius: 99%;
+}
+
+.principal > img ~ p {  /* Pertenecientes de '.principal', especificamente 'img', dame todos los elementos 'p' que esten despues del 'img'  */
     text-align: center;
 }
 
-em strong {
-    color: red; 
+.principal strong {
+    font-weight: bold;
 }
 
-#mision {
-    font-size: 20px;
+.principal .mision {
+    font-style: italic;
+    font-size: 1em;
     text-align: center;
-    margin: 20px auto;
+    margin: 1em auto;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE,#888888);
+}
+
+.mapa p {
+    margin: 0 0 2em 0;
+    text-align: center;
+}
+
+.mapa-contenido {
+    width: 940px;
+    margin: 0 auto;
 }
 
 .diferenciales {
-    padding: 20px 50px;
-    background: #CCCCCC;
-    width: 90%;
-    margin: 15px auto;
-    border-radius: 20px;
+    padding: 3em 0;
+    background: #888888;
 }
 
-.texto-dif {
-    margin-top: 7%;
-    width: 40%;
-    vertical-align: top;
-    display: inline-block;  /* DISPLAY INLINE-BLOCK: Le pedimos que solo el espacio de su contenido y los espaciamientos arr,aba,der,izq puedan ser ajustables */
-                            /* DISPLAY BLOCK: Hace un salto de linea por cada elemento */
-}
-
-.texto-dif h3 {
-    font-size: 22px;
+.diferenciales h3 {
+    font-size: 1.7em;
     font-style: bold;
-    margin-left: 25%;
-    margin-bottom: 15px;
+    color: #FFFFFF;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
-.texto-dif ul {
+.diferenciales-contenido {
+    width: 740px;
     margin: 0 auto;
-    margin-right: 15%;
-    margin-left: 10%;
-    font-size: 18px;
 }
 
-.items{
-    font-style: italic;
-}
-
-.imgDiferenciales{
+.diferenciales-contenido > ul { 
     width: 40%;
-    border-radius: 10px;
+    margin-top: 2.5em;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    display: inline-block;  /* DISPLAY INLINE-BLOCK: Le pedimos que solo el espacio de su contenido, los elementos html deben estar juntos uno del otro */
+                            /* DISPLAY BLOCK: Hace un salto de linea por cada elemento */
+    vertical-align: top;
+}
+
+.diferenciales-contenido ul > li {  /* Pertenecientes a 'ul', dame los elementos 'li' */
+    font-style: italic;
+    line-height: 1.5;   /* distancia entre items */
+}
+
+.diferenciales-contenido li:first-child { /*pseudoclase = first-child, hace referencia al primer elemento*/
+    font-weight: bold;
+}
+
+.diferenciales-contenido li:before {
+    content:"★ "
+}
+
+.diferenciales-contenido > ul + img {   /* Pertenecientes a '.diferenciales-contenido', dame los elementos 'img' que continuen luego de un elemento 'ul' */
+    width: calc(60% - 5px);
+    border-radius: 5px;
+}
+
+.video {
+    width: 727px;
+    margin: 7em auto;
 }
 
 /************************************/
