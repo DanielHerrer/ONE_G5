@@ -1,0 +1,17 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    background: #F3F5FC;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logo {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 3.5%;
+}
+
+main {
+    display: flex;
+}
