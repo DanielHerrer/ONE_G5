@@ -75,11 +75,13 @@ header {
     margin: 3% 0;
 }
     .btn-encriptar {
-        border: 1px solid #a50037;
-        border-radius: 20px;
+        border: 0;
+        border-radius: 50px;
         font-size: 1em;
+        /* font-weight: bold; */
         color: #FFFFFF;
-        background: linear-gradient(135deg, #ff00aa, #a50037);
+        /* background: linear-gradient(135deg, #ff00aa, #a50037); */
+        background: linear-gradient(100deg, #F545C1, #F53A8B, #E82B49);
         cursor: pointer;
         padding: 1.2em 1.2em;
         width: 50%;
@@ -89,11 +91,12 @@ header {
         transform: scale(1.04);
     }
     .btn-desencriptar {
-        border: 1px solid #39006e;
-        border-radius: 20px;
+        border: 0;
+        border-radius: 50px;
         font-size: 1em;
+        /* font-weight: bold; */
         color: #FFFFFF;
-        background: linear-gradient(135deg, #9900ff, #39006e);
+        background: linear-gradient(100deg, #C83AF1, #8422D1, #3502A7);
         cursor: pointer;
         margin-left: 5%;
         padding: 1.2em 1.2em;
@@ -116,13 +119,14 @@ header {
         border-radius: 24px;
         margin-top: -27%;
         margin-left: 25%;
+        position: relative;
     }
         #fondo-mensaje {
             pointer-events: none; 
-            width: 20%;
+            width: 85%; 
             position: absolute;
-            left: 72.5%;
-            top: 15%;
+            left: 7.5%;
+            top: 12.5%;
             opacity: 1;
             transition: opacity 1s, visibility 1s;
         }
@@ -135,7 +139,9 @@ header {
             pointer-events: none; 
             user-select: none;
             position: absolute;
-            top: 57.5%;
+            top: 75%; 
+            left: 50%; 
+            transform: translate(-50%,-50%);
             line-height: 1.2;
             opacity: 1;
             transition: opacity 1s, visibility 1s;
@@ -146,19 +152,15 @@ header {
         }
             #info-mensaje > h4 {
                 text-align: center;
-                margin-left: -8%;
+                margin-bottom: 2%;
                 font-size: 1.6em;
                 color: #343A40;
                 font-weight: bold;
-                padding: 0 2em;
             } 
             #info-mensaje > h5 {
                 text-align: center;
-                margin-top: 0.45em;
-                margin-left: -9.3%;
                 font-size: 1em;
                 color: #495057;
-                padding: 0 5em;
             } 
 
         .text-mensaje {
@@ -193,7 +195,7 @@ header {
             /* display: none; */
             transition: opacity 1s, visibility 0s 1s;
             border: 1px solid #0A3871;
-            border-radius: 15px;
+            border-radius: 50px;
             font-size: 1em;
             color: #0A3871;
             background: #FFFFFF;
@@ -286,6 +288,16 @@ footer {
         margin-bottom: 50%;
         font-size: 2.3em;
     }
+    /* .caja-input h6 {
+        margin-top: 4.6em;
+        color: #495057;
+        font-size: 0.75em;
+    } */
+        .caja-input h6 > img {
+            width: 2.6%;
+            margin: 0 1% -0.2% 1%;
+        }
+
     #sector-mensaje {
         padding-top: 0;
         margin: 8.5% 5% 8.5% 5%;
@@ -304,10 +316,17 @@ footer {
     }
     #info-mensaje {
         position: absolute;
-        top: 36.5%;
-        left: 7%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         font-size: 1.1em;
     }
+        #info-mensaje > h4 {         
+            font-size: 1.2em;
+        } 
+        #info-mensaje > h5 {
+            font-size: 0.9em;
+        } 
     .text-mensaje {
         height: auto;
         /* width: auto; */
@@ -372,6 +391,15 @@ footer {
         margin-bottom: 50%;
         font-size: 1.85em;
     }
+    /* .caja-input h6 {
+        margin-top: 4.6em;
+        color: #495057;
+        font-size: 0.75em;
+    } */
+        .caja-input h6 > img {
+            width: 4%;
+            margin: 0 1% -0.2% 1%;
+        }
     .botones {
         display: block;
         width: 100%;
@@ -402,13 +430,19 @@ footer {
     }
     #info-mensaje {
         position: absolute;
-        top: 17%;
-        left: 7%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         font-size: 0.85em;
     }
+        #info-mensaje > h4 {
+            font-size: 1.3em;
+        } 
+        #info-mensaje > h5 {
+            font-size: 1em;
+        } 
     .text-mensaje {
         height: auto;
-        /* width: auto; */
         resize: none;
         overflow: hidden;
         font-size: 1.5em;
