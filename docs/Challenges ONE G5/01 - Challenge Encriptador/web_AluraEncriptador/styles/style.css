@@ -1,4 +1,4 @@
-html {   
+html, body {   
     min-width: 320px;   
     max-width: 1400px; 
 }
@@ -346,6 +346,9 @@ footer {
     #btn-copiar.visible {
         display:block;
         visibility: visible;
+    }
+    footer {
+        margin-top: 8em; /* Soluciona la separacion del footer de 704px a 768px */
     }
     .footer-p {
         font-size: 1.1em;
