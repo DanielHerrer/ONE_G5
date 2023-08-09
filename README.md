@@ -10,7 +10,7 @@ git clone https://github.com/DanielHerrer/Challenge-Oracle-ONE-G5-EncriptadorDeT
 ```
 <b>2.</b> Accede a la página web:
 
-🔗 <a href="https://danielherrer.github.io/Challenge-Oracle-ONE-G5-EncriptadorDeTexto/Challenges%20ONE%20G5/01%20-%20Challenge%20Encriptador/web_AluraEncriptador/">¡Puedes acceder haciendo click aquí!</a> 🔗
+🔗 <a href="https://danielherrer.github.io/Challenge-Oracle-ONE-G5-EncriptadorDeTexto/Challenges%20ONE%20G5/01%20-%20Challenge%20Encriptador/web_AluraEncriptador/" target="_blank">¡Puedes acceder haciendo click aquí!</a> 🔗
 
 <b>3.</b> Empieza a encriptar!:
 
