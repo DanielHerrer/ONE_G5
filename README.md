@@ -19,6 +19,6 @@ git clone https://github.com/DanielHerrer/Challenge-Oracle-ONE-G5-EncriptadorDeT
 ## Tecnologías Utilizadas
 
 - HTML5 / CSS3
-- JavaScript (para la lógica encriptadora)
+- JavaScript
 
 ## Licencia © [Daniel Franco Herrera](https://www.linkedin.com/in/danielfrancoherrera/)
