@@ -1,6 +1,7 @@
 # Encriptador de Texto - Challenge ONE G5
-Recorrido de la beca de OracleNextEducation y AluraLatam.<br>
-Éste proyecto es un encriptador de texto desarrollado con herramientas web.
+<a src="https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671210503Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_esp&utm_medium=email&utm_source=RD+Station"><img src="/01_insignia_js_HTML.png" width="300px" alt="Insignia Obtenido por el Encriptador de Texto"></a>
+
+Éste proyecto es un encriptador de texto desarrollado con HTML5, CSS3 y JavaScript.
 
 ## Cómo usar el encriptador de texto
 
