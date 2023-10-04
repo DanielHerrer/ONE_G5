@@ -1,7 +1,10 @@
-# Encriptador de Texto - Challenge ONE G5
-<a src="https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671210503Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_esp&utm_medium=email&utm_source=RD+Station"><img src="/01_insignia_js_HTML.png" width="300px" alt="Insignia Obtenido por el Encriptador de Texto"></a>
+# Encriptador de Texto Alura - Challenge ONE G5
 
-Éste proyecto es un encriptador de texto desarrollado con HTML5, CSS3 y JavaScript.
+Ésta web fue parte del primer Challenge del programa Oracle Next Education, donde se aplicaron sprints, figma para el esquemado de la página y para el diseño decidí por mi parte darle una tonalidad más llamativa. Aplicando lo aprendido de la primer etapa con HTML5, CSS3 y JavaScript para la lógica.
+
+## Insignia Web & GitHub
+
+<a src="https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671210503Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_esp&utm_medium=email&utm_source=RD+Station"><img src="/01_insignia_js_HTML.png" width="300px" alt="Insignia Obtenido por el Encriptador de Texto"></a>
 
 ## Cómo usar el encriptador de texto
 
