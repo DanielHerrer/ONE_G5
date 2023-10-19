@@ -21,7 +21,7 @@
 
 ### :arrow_forward: Vista Previa del Encriptador Alura
 
-<img src="demo_encriptador.gif" alt="Demostración de la aplicación" width="600"/>
+<img src="demo_encriptador.gif" alt="Demostración de la aplicación" width="800"/>
 
 ## :question: Cómo usar el Conversor Alura
 
