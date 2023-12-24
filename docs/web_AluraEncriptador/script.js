@@ -1,40 +1,55 @@
-const inputArea = document.querySelector('.text-input');
-const outputArea = document.querySelector('.text-mensaje');
+const inputArea = document.querySelector('#text-input');
+const outputArea = document.querySelector('#text-mensaje');
 
 // Botones Encriptar | Desencriptar
 
 function btnEncriptar() {
+  const textoEntrada = inputArea.value;
+  // Verificar si el texto contiene letras con acentos o mayúsculas
+  if (/[A-Z]/.test(textoEntrada)) {
+    alert("El texto no puede contener letras mayusculas.");
+    return;
+  } else if (/[áéíóúüÁÉÍÓÚÜ]/.test(textoEntrada)) {
+    alert("El texto no puede contener letras con acentos.");
+    return;
+  }
+
+  // Continuar con el flujo normal si no hay mayúsculas o acentos
   const textEncriptado = encriptar(inputArea.value);
   outputArea.value = textEncriptado;
   inputArea.value = "";
+  if (window.innerWidth <= 768) {
+    outputArea.style.height = 'auto';
+    outputArea.style.height = outputArea.scrollHeight + 'px';
+  } else {
+    outputArea.style.height = 'auto';
+    outputArea.style.height = '400px';
+  }
+  mostrarBtnCopiar();
+  colorEncriptado();
 }
 
 function encriptar(string) {
-  let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-  string = string.toLowerCase();
-  for(let i=0; i<matrizCodigo.length; i++){
-    if(string.includes(matrizCodigo[i][0])){
-      string = string.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-    }
-  }
-  return string;  
+  return [...string].map(caracter => String.fromCharCode(caracter.charCodeAt(0) + 1)).join('');
 }
 
 function btnDesencriptar() {
   const textDesencriptado = desencriptar(inputArea.value);
   outputArea.value = textDesencriptado;
   inputArea.value = "";
+  if (window.innerWidth <= 768) {
+    outputArea.style.height = 'auto';
+    outputArea.style.height = outputArea.scrollHeight + 'px';
+  } else {
+    outputArea.style.height = 'auto';
+    outputArea.style.height = '400px';
+  }
+  mostrarBtnCopiar();
+  colorDesencriptado();
 }
 
 function desencriptar(string) {
-  let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-  string = string.toLowerCase();
-  for(let i=0; i<matrizCodigo.length; i++){
-    if(string.includes(matrizCodigo[i][1])){
-      string = string.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
-    }
-  }
-  return string;  
+  return [...string].map(caracter => String.fromCharCode(caracter.charCodeAt(0) - 1)).join('');
 }
 
 // Color texto mensaje
@@ -85,31 +100,29 @@ function btnCopiar() {
   outputArea.value = "";
 }
 
-// Si la pantalla es 768px o menos
+// Boton Pegar
 
-if (window.matchMedia('(max-width: 768px)').matches) {  
-  const textarea = document.querySelector('.text-input'); 
-  textarea.addEventListener('input', () => { // Escalabilidad vertical por cada salto de línea para text-input
-    textarea.style.height = 'auto';
-    textarea.style.height = textarea.scrollHeight + 'px';
+document.addEventListener('copy', function (event) {
+  const textoCopiado = window.getSelection().toString().trim();
+  const botonCopiado = document.getElementById('btn-pegar');
+
+  if (textoCopiado) {
+    botonCopiado.style.display = 'inline-block';
+  } else {
+    botonCopiado.style.display = 'none';
+  }
+});
+
+function btnPegar() {
+  // Obtener el contenido del portapapeles
+  navigator.clipboard.readText().then(function (textoCopiado) {
+    // Asignar el texto al textarea
+    inputArea.value = textoCopiado;
+    // Ocultar el boton
+    const btnPaste = document.getElementById('btn-pegar');
+    btnPaste.style.display = 'none';
+
+  }).catch(function (err) {
+    console.log('No se pudo leer el portapapeles, ' + err);
   });
-
-  function btnEncriptar() {
-    const textEncriptado = encriptar(inputArea.value);
-    outputArea.value = textEncriptado;
-    inputArea.value = "";
-    ajustarAltura(outputArea);
-  }
-  
-  function btnDesencriptar() {
-    const textDesencriptado = desencriptar(inputArea.value);
-    outputArea.value = textDesencriptado;
-    inputArea.value = "";
-    ajustarAltura(outputArea);
-  }
-  
-  function ajustarAltura(textarea) {  // Escalabilidad vertical por cada salto de linea para text-mensaje
-    textarea.style.height = 'auto'; 
-    textarea.style.height = textarea.scrollHeight + 'px';
-  }
 }

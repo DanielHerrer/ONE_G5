@@ -1,9 +1,5 @@
-html, body {   
-    min-width: 320px;   
-    max-width: 1400px; 
-}
-
 body {
+    width: 100%;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -21,7 +17,8 @@ header {
 .logo {
     width: 20%;
     /* float: left; */
-    margin: 30% 10% 0 30%;    /* 10.5% horizontal */
+    margin: 30% 10% 0 30%;
+    /* 10.5% horizontal */
 }
 
 #sector-input {
@@ -30,273 +27,326 @@ header {
     width: 50%;
 }
 
+#btn-pegar {
+    position: absolute;
+    top: 10%;
+    padding: 5px 15px;
+    border: 1px solid #680072;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #680072;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: 1s;
+
+    display: none;
+}
+
+#btn-pegar:hover {
+    box-shadow: 0 0 15px rgb(120, 2, 150);
+}
+
 .caja-input {
     height: 23.5em;
 }
-    .text-input {
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        background: #F3F5FC;
-        color: #495057;
-        font-size: 2em;
-        border: none;
-        resize: none;
-        width: 100%;
-        height: 80%;
-    }    
-    .text-input::placeholder {
-        /* color: #37006b;      */
-        background-image: linear-gradient(135deg, #ff00aa, #670b8b, #39006e);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    .text-input::placeholder::first-letter {
-        text-transform: uppercase;
-    }
-    .text-input:focus {             /* Cuando se le hace click: */
-        outline: none;              /* Remueve el marco de textarea activo */
-        text-transform: lowercase;  /* Transforma el texto en minuscula */
-    }
 
-    .caja-input h6 {
-        margin-top: 4.6em;
-        color: #495057;
-        font-size: 0.75em;
-    }
-        .caja-input h6 > img {
-            width: 2.5%;
-            margin: 0 1% -0.5% 1%;
-        }
+.text-input {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    background: #F3F5FC;
+    color: #495057;
+    font-size: 2em;
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 80%;
+}
+
+.text-input::placeholder {
+    /* color: #37006b;      */
+    background-image: linear-gradient(135deg, #ff00aa, #670b8b, #39006e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-input::placeholder::first-letter {
+    text-transform: uppercase;
+}
+
+/* Cuando se le hace click: */
+.text-input:focus {
+    outline: none;
+    /* Remueve el marco de textarea activo */
+}
+
+.caja-input h6 {
+    margin-top: 4.6em;
+    color: #495057;
+    font-size: 0.75em;
+}
+
+.caja-input h6>img {
+    width: 2.5%;
+    margin: 0 1% -0.5% 1%;
+}
 
 .botones {
     display: flex;
     width: 100%;
     margin: 3% 0;
 }
-    .btn-encriptar {
-        border: 0;
-        border-radius: 50px;
-        font-size: 1em;
-        /* font-weight: bold; */
-        color: #FFFFFF;
-        /* background: linear-gradient(135deg, #ff00aa, #a50037); */
-        background: linear-gradient(100deg, #F545C1, #F53A8B, #E82B49);
-        cursor: pointer;
-        padding: 1.2em 1.2em;
-        width: 50%;
-        transition: 0.5s;
-    }
-    .btn-encriptar:hover {
-        transform: scale(1.04);
-    }
-    .btn-desencriptar {
-        border: 0;
-        border-radius: 50px;
-        font-size: 1em;
-        /* font-weight: bold; */
-        color: #FFFFFF;
-        background: linear-gradient(100deg, #C83AF1, #8422D1, #3502A7);
-        cursor: pointer;
-        margin-left: 5%;
-        padding: 1.2em 1.2em;
-        width: 50%;
-        transition: 0.5s;
-    }
-    .btn-desencriptar:hover {
-        transform: scale(1.04);
-    }
+
+.btn-encriptar {
+    border: 0;
+    border-radius: 50px;
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: #FFFFFF;
+    /* background: linear-gradient(135deg, #ff00aa, #a50037); */
+    background: linear-gradient(100deg, #F545C1, #F53A8B, #E82B49);
+    cursor: pointer;
+    padding: 1.2em 1.2em;
+    width: 50%;
+    transition: 0.5s;
+}
+
+.btn-encriptar:hover {
+    transform: scale(1.04);
+}
+
+.btn-desencriptar {
+    border: 0;
+    border-radius: 50px;
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: #FFFFFF;
+    background: linear-gradient(100deg, #C83AF1, #8422D1, #3502A7);
+    cursor: pointer;
+    margin-left: 5%;
+    padding: 1.2em 1.2em;
+    width: 50%;
+    transition: 0.5s;
+}
+
+.btn-desencriptar:hover {
+    transform: scale(1.04);
+}
 
 #sector-mensaje {
     padding-top: 10%;
     width: 30%;
 }
-    .caja-mensaje {
-        height: 575px;
-        width: 100%;
-        background: #FFFFFF;
-        box-shadow: 0px 10px 25px rgb(0,0,0,0.15);
-        border-radius: 24px;
-        margin-top: -27%;
-        margin-left: 25%;
-        position: relative;
-    }
-        #fondo-mensaje {
-            pointer-events: none; 
-            width: 85%; 
-            position: absolute;
-            left: 7.5%;
-            top: 12.5%;
-            opacity: 1;
-            transition: opacity 1s, visibility 1s;
-        }
-        #fondo-mensaje.oculto {
-            opacity: 0;
-            visibility: hidden;
-        }
 
-        #info-mensaje {
-            pointer-events: none; 
-            user-select: none;
-            position: absolute;
-            top: 75%; 
-            left: 50%; 
-            transform: translate(-50%,-50%);
-            line-height: 1.2;
-            opacity: 1;
-            transition: opacity 1s, visibility 1s;
-        }
-        #info-mensaje.oculto {
-            opacity: 0;
-            visibility: hidden; /* hidden ayuda a que el span no interfiera por encima del boton copiar */ 
-        }
-            #info-mensaje > h4 {
-                text-align: center;
-                margin-bottom: 2%;
-                font-size: 1.6em;
-                color: #343A40;
-                font-weight: bold;
-            } 
-            #info-mensaje > h5 {
-                text-align: center;
-                font-size: 1em;
-                color: #495057;
-            } 
+.caja-mensaje {
+    height: 575px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.15);
+    border-radius: 24px;
+    margin-top: -27%;
+    margin-left: 25%;
+    position: relative;
+}
 
-        .text-mensaje {
-            /* pointer-events: none; */
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            height: 400px ;
-            width: 80%;
-            background: #FFFFFF;
-            border: none;
-            color: #495057;
-            font-size: 1.9em;
-            margin-top: 8%;
-            margin-left: 6%;
-            padding: 15px;
-            resize: none;
-        }
-        .text-mensaje:focus {
-            overflow: none;
-            outline: none;
-        }
-        .text-mensaje.desencriptado {
-            color: rgb(111, 5, 211);
-        }
-        .text-mensaje.encriptado {
-            color: rgb(255, 0, 106);
-        }
+#fondo-mensaje {
+    pointer-events: none;
+    width: 85%;
+    position: absolute;
+    left: 7.5%;
+    top: 12.5%;
+    opacity: 1;
+    transition: opacity 1s, visibility 1s;
+}
 
-        #btn-copiar {
-            opacity: 0;
-            visibility: hidden;
-            /* display: none; */
-            transition: opacity 1s, visibility 0s 1s;
-            border: 1px solid #0A3871;
-            border-radius: 50px;
-            font-size: 1em;
-            color: #0A3871;
-            background: #FFFFFF;
-            cursor: pointer;
-            margin-top: 8%;
-            margin-left: 10%;
-            width: 80%;  
-            height: 8.5%;
-        }
-        #btn-copiar.visible {
-            opacity: 1;
-            /* display:block; */
-            visibility: visible;
-            transition-delay: 0s;
-        }
-        #btn-copiar.encriptado {
-            border: 1px solid rgb(255, 0, 106);
-            color: rgb(255, 0, 106);
-            transition: 1s;
-        }
-        #btn-copiar.encriptado:hover {
-            box-shadow: 0 0 15px rgba(255, 0, 106, 1);
-        }
-        #btn-copiar.desencriptado {
-            border: 1px solid rgb(111, 5, 211);
-            color: rgb(111, 5, 211);
-            transition: 1s;
-        }
-        #btn-copiar.desencriptado:hover {
-            box-shadow: 0 0 15px rgba(111, 5, 211, 1);
-        }
+#fondo-mensaje.oculto {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#info-mensaje {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.2;
+    opacity: 1;
+    transition: opacity 1s, visibility 1s;
+}
+
+#info-mensaje.oculto {
+    opacity: 0;
+    visibility: hidden;
+    /* hidden ayuda a que el span no interfiera por encima del boton copiar */
+}
+
+#info-mensaje>h4 {
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 1.6em;
+    color: #343A40;
+    font-weight: bold;
+}
+
+#info-mensaje>h5 {
+    text-align: center;
+    font-size: 1em;
+    color: #495057;
+}
+
+.text-mensaje {
+    /* pointer-events: none; */
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    height: 400px;
+    width: 80%;
+    background: #FFFFFF;
+    border: none;
+    color: #495057;
+    font-size: 1.9em;
+    margin-top: 8%;
+    margin-left: 6%;
+    padding: 15px;
+    resize: none;
+}
+
+.text-mensaje:focus {
+    overflow: none;
+    outline: none;
+}
+
+.text-mensaje.desencriptado {
+    color: rgb(111, 5, 211);
+}
+
+.text-mensaje.encriptado {
+    color: rgb(255, 0, 106);
+}
+
+#btn-copiar {
+    opacity: 0;
+    visibility: hidden;
+    /* display: none; */
+    transition: opacity 1s, visibility 0s 1s;
+    border: 1px solid #0A3871;
+    border-radius: 50px;
+    font-size: 1em;
+    color: #0A3871;
+    background: #FFFFFF;
+    cursor: pointer;
+    margin-top: 8%;
+    margin-left: 10%;
+    width: 80%;
+    height: 8.5%;
+}
+
+#btn-copiar.visible {
+    opacity: 1;
+    /* display:block; */
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+#btn-copiar.encriptado {
+    border: 1px solid rgb(255, 0, 106);
+    color: rgb(255, 0, 106);
+    transition: 1s;
+}
+
+#btn-copiar.encriptado:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 106, 1);
+}
+
+#btn-copiar.desencriptado {
+    border: 1px solid rgb(111, 5, 211);
+    color: rgb(111, 5, 211);
+    transition: 1s;
+}
+
+#btn-copiar.desencriptado:hover {
+    box-shadow: 0 0 15px rgba(111, 5, 211, 1);
+}
 
 footer {
-    margin-top: 4em;
+    margin-top: 6em;
     background: #322936;
     text-align: center;
     padding: 40px;
 }
-    .footer-p {
-        color: #FFFFFF;
-        font-size: 0.8em;
-        margin: 10px;
-    }
-    .footer-p > a {
-        color: #ffffff;
-        text-decoration: none;
-    }
-    .footer-p > a:hover {
-        color: #00c3ff;
-        text-decoration: none;
-    }
-    .logo-artstation {
-        width: 1.75%;
-        margin-right: 0.5%;
-        margin-bottom: -0.35%;
-    }
-    .logo-linkedin {
-        width: 1.75%;
-        margin-right: 0.5%;
-        margin-bottom: -0.35%;
-    }
-    .logo-github {
-        width: 1.75%;
-        margin-right: 0.5%;
-        margin-bottom: -0.35%;
-    }
 
-@media screen and (max-width:768px){ 
+.footer-p {
+    color: #FFFFFF;
+    font-size: 0.8em;
+    margin: 10px;
+}
+
+.footer-p>a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-p>a:hover {
+    color: #00c3ff;
+    text-decoration: none;
+}
+
+.logo-artstation {
+    width: 1.75%;
+    margin-right: 0.5%;
+    margin-bottom: -0.35%;
+}
+
+.logo-linkedin {
+    width: 1.75%;
+    margin-right: 0.5%;
+    margin-bottom: -0.35%;
+}
+
+.logo-github {
+    width: 1.75%;
+    margin-right: 0.5%;
+    margin-bottom: -0.35%;
+}
+
+@media screen and (max-width:768px) {
     main {
         display: block;
     }
+
     .logo {
         width: 40%;
         margin-top: 95%;
         margin-bottom: 100%;
         margin-left: 50%;
     }
+
     #sector-input {
         width: auto;
         margin: 0 8%;
     }
+
+    #btn-pegar {
+        top: 17%;
+    }
+
     .caja-input {
         height: auto;
     }
+
     .text-input {
-        height: auto;
+        height: 300px;
         width: 100%;
-        overflow: hidden;
         margin-top: 5%;
-        margin-bottom: 50%;
+        margin-bottom: 20px;
         font-size: 2.3em;
     }
-    /* .caja-input h6 {
-        margin-top: 4.6em;
-        color: #495057;
-        font-size: 0.75em;
-    } */
-        .caja-input h6 > img {
-            width: 2.6%;
-            margin: 0 1% -0.2% 1%;
-        }
+
+    .caja-input h6>img {
+        width: 2.6%;
+        margin: 0 1% -0.2% 1%;
+    }
 
     #sector-mensaje {
         padding-top: 0;
@@ -304,36 +354,42 @@ footer {
         width: auto;
         height: auto;
     }
+
     .caja-mensaje {
         position: relative;
         height: auto;
         margin: 0 0 5% 0;
         padding-bottom: 1em;
     }
+
     #fondo-mensaje {
         opacity: 0;
         visibility: hidden;
     }
+
     #info-mensaje {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         font-size: 1.1em;
     }
-        #info-mensaje > h4 {         
-            font-size: 1.2em;
-        } 
-        #info-mensaje > h5 {
-            font-size: 0.9em;
-        } 
+
+    #info-mensaje>h4 {
+        font-size: 1.2em;
+    }
+
+    #info-mensaje>h5 {
+        font-size: 0.9em;
+    }
+
     .text-mensaje {
         height: auto;
-        /* width: auto; */
         resize: none;
         overflow: hidden;
         font-size: 2.55em;
     }
+
     #btn-copiar {
         display: none;
         visibility: hidden;
@@ -342,113 +398,134 @@ footer {
         margin-top: 1em;
         margin-bottom: 2.5em;
     }
+
     #btn-copiar.visible {
-        display:block;
+        display: block;
         visibility: visible;
     }
+
     footer {
-        margin-top: 8em; /* Soluciona la separacion del footer de 704px a 768px */
+        margin-top: 8em;
+        /* Soluciona la separacion del footer de 704px a 768px */
     }
+
     .footer-p {
         font-size: 1.1em;
         margin: 1em;
     }
+
     .logo-linkedin {
         margin-right: 1vw;
         width: 3%;
     }
+
     .logo-artstation {
         margin-right: 1vw;
         width: 3%;
     }
+
     .logo-github {
         margin-right: 1vw;
         width: 3%;
     }
 }
 
-@media screen and (max-width:375px){ 
+@media screen and (max-width:400px) {
     main {
         display: block;
     }
+
     .logo {
         width: 75%;
         margin-top: 95%;
         margin-bottom: 100%;
         margin-left: 50%;
     }
+
     #sector-input {
         width: auto;
         margin: 0 8%;
     }
+
+    #btn-pegar {
+        top: 12%;
+    }
+
     .caja-input {
         height: auto;
         width: auto;
     }
+
     .text-input {
-        height: auto;
+        height: 300px;
         width: 100%;
-        overflow: hidden;
         margin-top: 5%;
-        margin-bottom: 50%;
+        margin-bottom: 20px;
         font-size: 1.85em;
     }
-    /* .caja-input h6 {
-        margin-top: 4.6em;
-        color: #495057;
-        font-size: 0.75em;
-    } */
-        .caja-input h6 > img {
-            width: 4%;
-            margin: 0 1% -0.2% 1%;
-        }
+
+    .caja-input h6>img {
+        width: 4%;
+        margin: 0 1% -0.2% 1%;
+    }
+
     .botones {
         display: block;
         width: 100%;
     }
+
     .btn-encriptar {
         width: 100%;
     }
+
     .btn-desencriptar {
         width: 100%;
         margin-top: 1em;
         margin-left: 0;
     }
+
     #sector-mensaje {
         padding-top: 7vh;
         margin: 8.5% 5% 8.5% 5%;
         width: auto;
         height: auto;
     }
+
     .caja-mensaje {
         position: relative;
         height: auto;
         margin: 0 0 5% 0;
         padding-bottom: 1em;
     }
+
     #fondo-mensaje {
         opacity: 0;
         visibility: hidden;
     }
+
     #info-mensaje {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         font-size: 0.85em;
     }
-        #info-mensaje > h4 {
-            font-size: 1.3em;
-        } 
-        #info-mensaje > h5 {
-            font-size: 1em;
-        } 
+
+    #info-mensaje>h4 {
+        font-size: 1.3em;
+    }
+
+    #info-mensaje>h5 {
+        font-size: 1em;
+    }
+
     .text-mensaje {
         height: auto;
         resize: none;
         overflow: hidden;
         font-size: 1.5em;
     }
+
     #btn-copiar {
         display: none;
         visibility: hidden;
@@ -457,23 +534,28 @@ footer {
         margin-top: 1em;
         margin-bottom: 2.5em;
     }
+
     #btn-copiar.visible {
-        display:block;
+        display: block;
         visibility: visible;
     }
+
     .footer-p {
         font-size: 1em;
     }
+
     .logo-github {
         width: 6%;
         margin-bottom: -1%;
         margin-right: 2vw;
     }
+
     .logo-artstation {
         width: 6%;
         margin-bottom: -1%;
         margin-right: 2vw;
     }
+
     .logo-linkedin {
         width: 6%;
         margin-bottom: -1%;
