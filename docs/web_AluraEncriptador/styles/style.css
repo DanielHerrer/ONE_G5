@@ -29,7 +29,7 @@ header {
 
 #btn-pegar {
     position: absolute;
-    top: 10%;
+    top: 5%;
     padding: 5px 15px;
     border: 1px solid #680072;
     border-radius: 20px;
@@ -328,7 +328,8 @@ footer {
     }
 
     #btn-pegar {
-        top: 17%;
+        right: 10%;
+        top: 10%;
     }
 
     .caja-input {
@@ -430,7 +431,7 @@ footer {
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:500px) {
     main {
         display: block;
     }
@@ -448,7 +449,8 @@ footer {
     }
 
     #btn-pegar {
-        top: 12%;
+        right: 10%;
+        top: 7.5%;
     }
 
     .caja-input {
